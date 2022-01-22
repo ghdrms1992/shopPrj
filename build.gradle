@@ -1,3 +1,9 @@
+buildscript {
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
+
 plugins {
 	id 'org.springframework.boot' version '2.6.2'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
@@ -8,10 +14,10 @@ plugins {
 
 group = 'com.shop'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+//sourceCompatibility = '11'
 
 //querydsl 추가
-apply plugin: "com.ewerk.gradle.plugins.querydsl"
+//apply plugin: "com.ewerk.gradle.plugins.querydsl"
 
 //querydsl 추가
 configurations {
@@ -34,7 +40,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	//querydsl 추가
-	implementation 'com.querydsl:querydsl-jpa'
+	//implementation 'com.querydsl:querydsl-jpa'
+	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}"
+	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 
 }
 
