@@ -46,6 +46,9 @@ dependencies {
 	implementation "com.querydsl:querydsl-apt:${queryDslVersion}"
 
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+	// https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-security
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+
 }
 
 //querydsl 추가
